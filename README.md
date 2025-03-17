@@ -1,4 +1,7 @@
 # Documentation: Concordant.app
+
+<br />
+
 How to use and configure [Concordant.app](https://concordant.app) in your workflows.
 
 **Quick start**
@@ -8,12 +11,12 @@ How to use and configure [Concordant.app](https://concordant.app) in your workfl
 4. Reload to get a testing plan
 5. Configure `test.plan.json` to suit your needs
 
+<br />
 
 
-
-
----
 ## The `Effects` of Your `Code Changes` as a `Testing Plan`
+
+<br />
 
 ![Screenshot of an example testing round from Concordant with testing details visible.](./testing%20round%20details%20screenshot.png)
 
