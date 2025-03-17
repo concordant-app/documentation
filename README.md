@@ -54,9 +54,10 @@ These dependencies are extracted from the code using language specific import cl
 <br />
 <br />
 
-See how some **changes** become multiplied as **effects**. This is why Concordant was created.  
-
+> See how some **changes** become multiplied as **effects**. This is why Concordant was created.  
+> 
 > Note: Using files as the module representation is an optimisation on multiple levels. More on this topic in the Testing Plan guide. (TODO 3)
+> 
 
   
 <br clear="right"/>
@@ -66,8 +67,7 @@ See how some **changes** become multiplied as **effects**. This is why Concordan
 - [ ] TODO 2: Add link to dependency configuration guide.
 - [ ] TODO 3: Add link to testing plan guide configuration guide.
 
-
----
+<br />
 
 ### What is a `Code Change`?
 
@@ -82,11 +82,43 @@ Concordant considers changes always on a file level, just as effects. The list o
 
 - [ ] TODO 4: Add link to diff configuration guide.
 
+<br />
+
 ### What is a `Testing Plan`?
 
 - [ ] TODO: Describe how the testing plan is formed based on feature rules and effects
 - [ ] TODO: Describe how the tests are categorised to user flow and technical details and further down to different types of technical components
 - [ ] TODO: Describe how to approach the testing using the plan, the categorised test cases, the `level` shown, and files as features
+
+<img align="right" width="50%" height="50%" src="./testing%20round%20screenshot.png">
+
+<br />
+<br />
+
+Effects activate parts of the testing plan and produce a test round.
+
+  
+<br clear="right"/>
+
+<img align="left" width="50%" height="50%" src="./feature%20rules%20screenshot.png">
+
+<br />
+<br />
+
+The test round is created based on feature configurations.
+
+  
+<br clear="left"/>
+
+<img align="right" width="50%" height="50%" src="./testing%20round%20details%20screenshot.png">
+
+<br />
+<br />
+
+Affected files become test cases inside test suites.
+
+  
+<br clear="right"/>
 
 ### How do I configure Concordant?
 
