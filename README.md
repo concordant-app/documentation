@@ -1,5 +1,7 @@
 # Documentation: Concordant.app
 
+**Concordant: To be in harmony within one's intentions and actions.**
+
 <br />
 
 How to use and configure [Concordant.app](https://concordant.app) in your workflows.
@@ -67,7 +69,16 @@ See how some **changes** become multiplied as **effects**. This is why Concordan
 
 ### What is a `Code Change`?
 
-- [ ] TODO: Describe how changes are are extracted based on changes files using git diff configurations
+Changes are files that have been changed based on a Git diff. 
+
+There are two types of changes:
+- **Uncommitted**: a file that has been changed locally - essentially uncommitted changes 
+- **Committed**: a file that has been changed when comparing the current state of the code to a target older commit
+
+Concordant considers changes always on a file level, just as effects. The list of changes is always created as a combination of the local uncommitted changes and the committed changes based on the change configuration. If no change configuration is provided, the default is the current branch vs the latest upstream state of the branch. Read more in the configuration guide. (TODO 4)
+
+
+- [ ] TODO 4: Add link to diff configuration guide.
 
 ### What is a `Testing Plan`?
 
