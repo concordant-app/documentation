@@ -15,8 +15,8 @@ How to use and configure [Concordant.app](https://concordant.app) in your workfl
 ---
 ## The `Effects` of Your `Code Changes` as a `Testing Plan`
 
+![Screenshot of an example testing round from Concordant with testing details visible.](./testing%20round%20details%20screenshot.png)
 
-<img src="https://github.com/concordant-app/documentation/blob/f7c33fb39e77ed3ba33a51fee722f8f411e72bf8/testing%20round%20details%20screenshot.png">
 
 ---
 
