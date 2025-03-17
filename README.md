@@ -32,6 +32,8 @@ How to use and configure [Concordant.app](https://concordant.app) in your workfl
 4. How do I configure Concordant?
 5. Which technologies does Concordant support?
 
+- [ ] TODO 5: Add links to the sections
+
 ### What are `Effects`?
 
 
