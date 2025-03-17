@@ -36,15 +36,31 @@ There are two types of effects:
 - **Changed**: a file that has been changed is also an effect
 - **Affected**: a file that has a dependency to another file that has been affected or changed
 
-Concordant uses files to represent modules, modules are be mapped into features, and affected features become test cases within the test round. All the effects of the current diff are calculated using file-based module dependencies such as `import { Something } from './another-file'`. These dependencies are extracted from the code using language specific import clauses (TODO 1). More dependencies can also be added by hand (TODO 2). See more in the Configuration guide. 
+Concordant uses files to represent modules, modules are be mapped into features, and affected features become test cases within the test round. All the effects of the current diff are calculated using file-based module dependencies, such as:
+```
+import { Something } from './another-file'
+```
+These dependencies are extracted from the code using language specific import clauses (TODO 1). More dependencies can also be added by hand (TODO 2). See more in the Configuration guide. 
+
+<img align="right" width="50%" height="50%" src="./change%20effects%20screenshot.png">
+
+<br />
+<br />
+
+See how some **changes** become multiplied as **effects**. This is why Concordant was created.  
 
 > Note: Using files as the module representation is an optimisation on multiple levels. More on this topic in the Testing Plan guide. (TODO 3)
+
+  
+<br clear="right"/>
+
 
 - [ ] TODO 1: Add link to supported technologies guide configuration guide.
 - [ ] TODO 2: Add link to dependency configuration guide.
 - [ ] TODO 3: Add link to testing plan guide configuration guide.
 
-<screenshot of effects here>
+
+---
 
 ### What is a `Code Change`?
 
