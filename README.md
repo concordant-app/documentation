@@ -118,18 +118,102 @@ The test plan, and therefore the test round, is created with feature configurati
 
 Affected files become test cases inside test suites. They may be further categorised based on configurations and technology assumptions. 
 <br />
-**About the design**
-The `Level` indicates how deep the listed component is in the call stack from the feature. For example, `level: 1` means the component is a direct descendant. `Level: 3` means the component is a grand-grand-child of the feature. This is intended to help you in determining what to focus on. The design assumes the deeper the component goes, the more it becomes an implementation detail. However, sometimes the implementation details are the most important. This is why all affected components are highlighted. Furthermore, with some technology stacks and naming conventions the cases are divided into `User flow` and `Technical details`. As an example, if the codebase contains JSX (*.jsx, *.tsx) files, these are assumed to be user facing components. The testing rounds focus first on the components that a user can directly use. As sometimes even JSX files are actually very technical in nature, they may be categorised as utility or state modules, for example. In such situations the modules are automatically moved to the Technical Details grouping.
-
   
 <br clear="right"/>
+<br />
 
-- [ ] TODO 6: 
+**About the design**
+<br />
+The `Level` indicates how deep the listed component is in the dependency hierarchy from the feature. For example, `level: 1` means the component is a direct descendant. `Level: 3` means the component is a grand-grand-child of the feature. This is intended to help you in determining what to focus on. The design assumes the deeper the component goes, the more it becomes an implementation detail. However, sometimes the implementation details are the most important. This is why all affected components are visible. 
+<br />
+Furthermore, with some technology stacks and naming conventions the cases are divided into `User flow` and `Technical details`. As an example, if the codebase contains JSX (*.jsx, *.tsx) files, these are assumed to be user facing components. The testing rounds focus first on the components a user can directly use. As sometimes even JSX files are actually very technical in nature, they may be categorised as utility or state modules, for example. In such situations the modules are automatically moved to the Technical Details grouping.
+
 
 ### How do I configure Concordant?
 
 - [ ] TODO: Describe how to create feature rules and diff configurations
 - [ ] TODO: Describe how to set the project purpose
+
+Here's a configuration template using <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" valign="middle" width="20" height="20">[Sentry's codebase](https://github.com/getsentry/sentry) as an example.
+```
+{
+  "name": "Sentry Fair Source codebase",
+  "purpose": {
+    "primary": "Code breaks, fix it faster",
+    "secondary": "with application monitoring"
+
+  },
+  "config": {
+    "changes": {
+      "old": "HEAD",
+      "new": "HEAD@{upstream}"
+    },
+    "features": [
+
+      {
+        "alias": "App Homepage 👋 ",
+        "matchers": ["static/app/views/app/index.tsx"]
+      },
+
+      {
+        "alias": "Performance 🚀 ",
+        "matchers": ["static/app/views/performance/**/*.tsx"]
+      },
+      {
+        "alias": "Profiling 🔬 ",
+        "matchers": ["static/app/views/profiling/**/*.tsx"]
+      },
+      {
+        "alias": "Views 📺",
+        "matchers": ["static/app/views/**/index.tsx"]
+      }
+      ,
+      {
+        "alias": "Subscriptions & Billing 🏦",
+        "matchers": ["**/*subscription*/**/*.tsx", "**/*{subscription}*.tsx"]
+      }
+    ]
+  }
+}
+
+```
+
+#### Purpose
+Use the purpose configuration to set the intention of the project. This helps you align the configurations and testing actions. 
+
+#### Changes
+Use Git's commit hashes, branch notation and shortcuts to define the start and end of diffing. If it works on with `git diff <old>..<new>`, it should work here. 
+
+**Examples**
+
+Diff between current state of the current brach vs current state of this branch on the remote (e.g. PR vs target branch)
+```
+"changes": {
+      "old": "HEAD",
+      "new": "HEAD@{upstream}"
+    }
+```
+
+Diff between specific commits (e.g. Previous release vs Upcoming release)
+```
+"changes": {
+      "old": "abcdefg",
+      "new": "hijklmn"
+    }
+```
+
+Diff between branches
+```
+"changes": {
+      "old": "main",
+      "new": "hotfix/critical-production-bug"
+    }
+```
+
+
+Note: The diffing system uses your local git repository, meaning you may have to fetch it to get the most accurate diff to remote origins.
+
+#### Features
 
 ### Which technologies does Concordant support?
 
