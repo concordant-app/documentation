@@ -86,9 +86,10 @@ Concordant considers changes always on a file level, just as effects. The list o
 
 ### What is a `Testing Plan`?
 
-- [ ] TODO: Describe how the testing plan is formed based on feature rules and effects
 - [ ] TODO: Describe how the tests are categorised to user flow and technical details and further down to different types of technical components
 - [ ] TODO: Describe how to approach the testing using the plan, the categorised test cases, the `level` shown, and files as features
+
+A testing plan is a fusion of features, effects, configuration and tasks. Based on configured feature rules, effects activate features into test cases on the next test round. The test round represents a partial test plan, focused and filtered down to only show the test cases that have been activated by effects. The Test Round itself is a list of tasks where you can drill down to get more details on which parts of a feature have been affected and why.
 
 <img align="right" width="50%" height="50%" src="./testing%20round%20screenshot.png">
 
@@ -105,7 +106,7 @@ Effects activate parts of the testing plan and produce a test round.
 <br />
 <br />
 
-The test round is created based on feature configurations.
+The test plan, and therefore the test round, is created with feature configurations. The feature configurations are glob matchers to files, which means your naming conventions and project structures are meaningful. 
 
   
 <br clear="left"/>
@@ -115,10 +116,15 @@ The test round is created based on feature configurations.
 <br />
 <br />
 
-Affected files become test cases inside test suites.
+Affected files become test cases inside test suites. They may be further categorised based on configurations and technology assumptions. 
+<br />
+**About the design**
+The `Level` indicates how deep the listed component is in the call stack from the feature. For example, `level: 1` means the component is a direct descendant. `Level: 3` means the component is a grand-grand-child of the feature. This is intended to help you in determining what to focus on. The design assumes the deeper the component goes, the more it becomes an implementation detail. However, sometimes the implementation details are the most important. This is why all affected components are highlighted. Furthermore, with some technology stacks and naming conventions the cases are divided into `User flow` and `Technical details`. As an example, if the codebase contains JSX (*.jsx, *.tsx) files, these are assumed to be user facing components. The testing rounds focus first on the components that a user can directly use. As sometimes even JSX files are actually very technical in nature, they may be categorised as utility or state modules, for example. In such situations the modules are automatically moved to the Technical Details grouping.
 
   
 <br clear="right"/>
+
+- [ ] TODO 6: 
 
 ### How do I configure Concordant?
 
