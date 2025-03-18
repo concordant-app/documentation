@@ -210,10 +210,69 @@ Diff between branches
     }
 ```
 
+<br />
 
 Note: The diffing system uses your local git repository, meaning you may have to fetch it to get the most accurate diff to remote origins.
 
 #### Features
+
+
+Features are defined as sets of glob matchers to filenames and paths from your repository's root. The intention is to set define that are important with rules that make testing easier. Think in terms of what are the major view, pages or components of your application. These become your test suites, which in turn contain all the affected components automatically. Thus, you don't necessarily need to have rules for all features, as long as they are part of some bigger feature. 
+
+If you want to be sure, you can set your index page as an entrypoint. This way you always catch everything underneath. However, this doesn't work for architectures where the index isn't actually depending on the other pages. An example could be a system where the routes are generated from directory structures and the pages themselves link to these paths rather than to other UI components.
+
+It is possible to set a catch-all wildcard too. The more rules, and the more files they match, the more time it takes to analyse the codebase. Rules matching to several thousand components can be analysed in less than half a minute. See more about performance and deeper insights into how to configure in useful ways in our example case studies. (TODO 6)
+
+
+**Examples**
+
+Defining a specific file
+```
+"features": [
+
+  {
+    "alias": "App Homepage 👋 ",
+    "matchers": ["static/app/views/app/index.tsx"]
+  },
+]
+```
+
+Multiple matchers for the feature
+```
+"features": [
+
+  {
+    "alias": "View & Pages",
+    "matchers": ["**/views/**/*.tsx", "**/views/**/*.tsx",]
+  },
+]
+```
+
+Being specific with the filename (i.e. don't match to just the first appearance of 'view')
+```
+"features": [
+
+  {
+    "alias": "View & Pages",
+    "matchers": ["**/views/**/*{View}.tsx",]
+  },
+]
+```
+
+Catching every JSX component
+```
+"features": [
+
+  {
+    "alias": "Catch-all (Legacy code safety net)",
+    "matchers": ["**/*.jsx", "**/*.tsx"]
+  },
+]
+```
+
+**Note: The globs are treated as case-insensitive.**
+
+- TODO 6: Add a link to example case studies.
 
 ### Which technologies does Concordant support?
 
