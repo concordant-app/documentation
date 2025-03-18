@@ -138,7 +138,7 @@ Affected files become test cases inside test suites.
 - [ ] TODO: VueJS (.vue)
 
 **Project & Build Configurations**
-- [ ] TODO: `tsconfig.json? (TypeScript compiler)
+- [ ] TODO: `tsconfig.json` (TypeScript compiler)
 - [ ] TODO: `package.json` (JavaScript variants )
 
 ---
