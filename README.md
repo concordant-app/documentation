@@ -86,8 +86,7 @@ Concordant considers changes always on a file level, just as effects. The list o
 
 ### What is a `Testing Plan`?
 
-- [ ] TODO: Describe how the tests are categorised to user flow and technical details and further down to different types of technical components
-- [ ] TODO: Describe how to approach the testing using the plan, the categorised test cases, the `level` shown, and files as features
+<br />
 
 A testing plan is a fusion of features, effects, configuration and tasks. Based on configured feature rules, effects activate features into test cases on the next test round. The test round represents a partial test plan, focused and filtered down to only show the test cases that have been activated by effects. The Test Round itself is a list of tasks where you can drill down to get more details on which parts of a feature have been affected and why.
 
@@ -121,6 +120,7 @@ Affected files become test cases inside test suites. They may be further categor
   
 <br clear="right"/>
 <br />
+<br />
 
 **About the design**
 <br />
@@ -131,8 +131,8 @@ Furthermore, with some technology stacks and naming conventions the cases are di
 
 ### How do I configure Concordant?
 
-- [ ] TODO: Describe how to create feature rules and diff configurations
-- [ ] TODO: Describe how to set the project purpose
+
+- [ ] TODO: Describe how to set additional dependencies manually
 
 Here's a configuration template using <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" valign="middle" width="20" height="20">[Sentry's codebase](https://github.com/getsentry/sentry) as an example.
 ```
@@ -271,6 +271,39 @@ Catching every JSX component
 ```
 
 **Note: The globs are treated as case-insensitive.**
+
+
+#### Additional Dependencies
+
+One of the main inspirations for creating Concordant was the mysterious nature of breaking some faraway features with a seemingly unintentional change. This is naturally solved by implementing a dependency analysis of the codebase. However, sometimes there is no dependency in the code. You can use `dependencies.json` in the root of your project to inject additional dependencies to the analysis. This is how we can overcome the missing dependencies between, for example, a JavaScript frontend and a Python backend.
+
+The file content needs to be a valid json array as shown below.
+
+**Examples**
+
+Dependency format
+```
+[
+  {
+    "source": "some/file",
+    "target": "the/other/file"
+  }
+]
+```
+
+UI => API fetch calls
+```
+[
+  {
+    "source": "src/ui/pages/SomeController.ts",
+    "target": "src/backend/api/SomeApi.ts"
+  },
+  {
+    "source": "src/ui/hooks/AppStateProvider.tsx",
+    "target": "src/backend/api/state/index.ts"
+  }
+]
+```
 
 - TODO 6: Add a link to example case studies.
 
