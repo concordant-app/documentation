@@ -1,6 +1,6 @@
 # Documentation: Concordant.app
 
-**Concordant: To be in harmony within one's intentions and actions.**
+The regression testing planner for developers.
 
 <br />
 
@@ -12,27 +12,35 @@ How to use and configure [Concordant.app](https://concordant.app) in your workfl
 3. Make a code change
 4. Reload to get a testing plan
 5. Configure `test.plan.json` to suit your needs
+6. Fill blindspots with `dependencies.json`
 
 <br />
 
+_Concordant: To be in harmony within one's intentions and actions._  
+
+<br />
 
 ## The `Effects` of Your `Code Changes` as a `Testing Plan`
 
 <br />
+
 
 ![Screenshot of an example testing round from Concordant with testing details visible.](./testing%20round%20details%20screenshot.png)
 
 
 ---
 
-**Table of Contents**
-1. What are `Effects`?
-2. What is a `Code Change`?
-3. What is a `Testing Plan`?
-4. How do I configure Concordant?
-5. Which technologies does Concordant support?
+<br />
 
-- [ ] TODO 5: Add links to the sections
+**Table of Contents**
+1. [What are Effects?](#what-are-effects)
+2. [What is a Code Change?](#what-is-a-code-change)
+3. [What is a Testing Plan?](#what-is-a-testing-plan)
+4. [How do I configure Concordant?](#how-do-i-configure-concordant)
+5. [Which technologies does Concordant support?](#which-technologies-does-concordant-support)
+
+
+<br />
 
 ### What are `Effects`?
 
@@ -90,32 +98,39 @@ Concordant considers changes always on a file level, just as effects. The list o
 
 A testing plan is a fusion of features, effects, configuration and tasks. Based on configured feature rules, effects activate features into test cases on the next test round. The test round represents a partial test plan, focused and filtered down to only show the test cases that have been activated by effects. The Test Round itself is a list of tasks where you can drill down to get more details on which parts of a feature have been affected and why.
 
-<img align="right" width="50%" height="50%" src="./testing%20round%20screenshot.png">
+<br />
+
+<img align="right" width="60%" height="60%" src="./testing%20round%20screenshot.png">
 
 <br />
 <br />
 
-Effects activate parts of the testing plan and produce a test round.
+**Effects activate parts of the testing plan and produce a test round.**
 
   
 <br clear="right"/>
+<br />
 
-<img align="left" width="50%" height="50%" src="./feature%20rules%20screenshot.png">
+<img align="left" width="60%" height="60%" src="./feature%20rules%20screenshot.png">
 
 <br />
 <br />
 
-The test plan, and therefore the test round, is created with feature configurations. The feature configurations are glob matchers to files, which means your naming conventions and project structures are meaningful. 
+**The test plan, and therefore the test round, is created with feature configurations. The feature configurations are glob matchers to files, which means your naming conventions and project structures are meaningful.**
 
   
 <br clear="left"/>
+<br />
+<br />
 
-<img align="right" width="50%" height="50%" src="./testing%20round%20details%20screenshot.png">
+
+
+<img align="right" width="60%" height="60%" src="./testing%20round%20details%20screenshot.png">
 
 <br />
 <br />
 
-Affected files become test cases inside test suites. They may be further categorised based on configurations and technology assumptions. 
+**Affected files become test cases inside test suites. They may be further categorised based on configurations and technology assumptions.**
 <br />
   
 <br clear="right"/>
