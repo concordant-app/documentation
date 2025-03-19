@@ -4,8 +4,12 @@
 
 ## Performance
 
+**State**
 - _Concordant 1.0.0_
 - _Sentry codebase state in March 2025_
+- _Macbook Air M3_
+
+**Result**
 On a Macbook Air M3 the example configurations runs a full reload in about 10s. Without configuration from 30s-60s depending on the amount of effects in the codebase. In general, smaller changesets run faster.
 
 Memory usage varies between 1GB-10GB depending on the amount of components. 
