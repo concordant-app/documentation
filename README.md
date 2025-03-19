@@ -345,7 +345,8 @@ See the individual guides for specifics on what is and isn't supported currently
 > Each language extractor may also take advantage of existing project configurations, such as `tsconfig.json` for TypeScript projects. In the case of TypeScript, the configuration file may provide import
 > path aliases that are taken into account when mapping the import code lines to dependencies. 
 
-
+**Operating systems**
+Concordant runs currently on MacOS only.
 
 ---
 
