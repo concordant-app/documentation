@@ -106,7 +106,7 @@ A testing plan is a fusion of features, effects, configuration and tasks. Based 
 <br />
 <br />
 
-**Effects activate parts of the testing plan and produce a test round.**
+Effects activate parts of the testing plan and produce a test round.
 
   
 <br clear="right"/>
@@ -117,7 +117,7 @@ A testing plan is a fusion of features, effects, configuration and tasks. Based 
 <br />
 <br />
 
-**The test plan, and therefore the test round, is created with feature configurations. The feature configurations are glob matchers to files, which means your naming conventions and project structures are meaningful.**
+The test plan, and therefore the test round, is created with feature configurations. The feature configurations are glob matchers to files, which means your naming conventions and project structures are meaningful.
 
   
 <br clear="left"/>
@@ -131,7 +131,7 @@ A testing plan is a fusion of features, effects, configuration and tasks. Based 
 <br />
 <br />
 
-**Affected files become test cases inside test suites. They may be further categorised based on configurations and technology assumptions.**
+Affected files become test cases inside test suites. They may be further categorised based on configurations and technology assumptions.
 <br />
   
 <br clear="right"/>
