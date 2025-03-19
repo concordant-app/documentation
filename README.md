@@ -56,7 +56,7 @@ Concordant uses files to represent modules, modules are be mapped into features,
 ```
 import { Something } from './another-file'
 ```
-These dependencies are extracted from the code using language specific import clauses (TODO 1). More dependencies can also be added by hand (TODO 2). See more in the Configuration guide. 
+These dependencies are extracted from the code using [language specific import clauses](#which-technologies-does-concordant-support). More dependencies can also be added by hand (TODO 2). See more in the Configuration guide. 
 
 <img align="right" width="50%" height="50%" src="./change%20effects%20screenshot.png">
 
@@ -72,7 +72,6 @@ These dependencies are extracted from the code using language specific import cl
 <br clear="right"/>
 
 
-- [ ] TODO 1: Add link to supported technologies guide configuration guide.
 - [ ] TODO 2: Add link to dependency configuration guide.
 - [ ] TODO 3: Add link to testing plan guide configuration guide.
 
@@ -323,9 +322,6 @@ UI => API fetch calls
 
 
 ### Which technologies does Concordant support?
-
-- [ ] TODO: Describe how different supported technologies are taken into account
-- [ ] TODO: Describe how supported technologies are assured for quality
 
 Concordant's programming language support is at the core of the reliability of the testing plans. Each supported language has its own extraction rules for finding dependencies between files which emulate how the language itself resolves modules. 
 
