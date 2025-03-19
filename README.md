@@ -143,7 +143,6 @@ Furthermore, with some technology stacks and naming conventions the cases are di
 ### How do I configure Concordant?
 
 
-- [ ] TODO: Describe how to set additional dependencies manually
 
 Here's a configuration template using <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" valign="middle" width="20" height="20">[Sentry's codebase](https://github.com/getsentry/sentry) as an example.
 ```
