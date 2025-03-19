@@ -56,24 +56,21 @@ Concordant uses files to represent modules, modules are be mapped into features,
 ```
 import { Something } from './another-file'
 ```
-These dependencies are extracted from the code using [language specific import clauses](#which-technologies-does-concordant-support). More dependencies can also be added by hand (TODO 2). See more in the Configuration guide. 
+These dependencies are extracted from the code using [language specific import clauses](#which-technologies-does-concordant-support). More dependencies can also be added by hand. See more in the [Configuration guide.](#additional-dependencies-blindspots) 
 
-<img align="right" width="50%" height="50%" src="./change%20effects%20screenshot.png">
+<img align="right" width="60%" height="60%" src="./change%20effects%20screenshot.png">
 
 <br />
 <br />
 
 > See how some **changes** become multiplied as **effects**. This is why Concordant was created.  
 > 
-> Note: Using files as the module representation is an optimisation on multiple levels. More on this topic in the Testing Plan guide. (TODO 3)
+> Note: Using files as the module representation is an optimisation on multiple levels. More on this topic in the [Testing Plan guide](#what-is-a-testing-plan).
 > 
 
   
 <br clear="right"/>
 
-
-- [ ] TODO 2: Add link to dependency configuration guide.
-- [ ] TODO 3: Add link to testing plan guide configuration guide.
 
 <br />
 
@@ -329,17 +326,17 @@ See the individual guides for specifics on what is and isn't supported currently
 
 
 **Programming Languages**
-- [ ] [Typescript/JavaScript](languages/TypeScript-JavaScript.md) (*.ts, *.js)
-- [ ] Rust (in beta stage)
+- [Typescript/JavaScript](languages/TypeScript-JavaScript.md) (*.ts, *.js)
+- Rust (in beta stage)
 
 **Frameworks**
-- [ ] [React](languages/TypeScript-JavaScript.md) (*.tsx, *.jsx) as Typescript/Javascript
-- [ ] [SolidJS](languages/TypeScript-JavaScript.md) (*.tsx, *.jsx) Typescript/Javascript
-- [ ] [VueJS](languages/TypeScript-JavaScript.md) (.vue) Typescript/Javascript
+- [React](languages/TypeScript-JavaScript.md) (*.tsx, *.jsx) as Typescript/Javascript
+- [SolidJS](languages/TypeScript-JavaScript.md) (*.tsx, *.jsx) Typescript/Javascript
+- [VueJS](languages/TypeScript-JavaScript.md) (.vue) Typescript/Javascript
 
 **Project & Build Configurations**
-- [ ] [`tsconfig.json`](languages/TypeScript-JavaScript.md) for Typescript
-- [ ] [`package.json`](languages/TypeScript-JavaScript.md) Typescript/Javascript
+- [`tsconfig.json`](languages/TypeScript-JavaScript.md) for Typescript
+- [`package.json`](languages/TypeScript-JavaScript.md) Typescript/Javascript
 
 > Notes about quality assurance 🔬
 > 
