@@ -16,6 +16,15 @@ Memory usage varies between 1GB-10GB depending on the amount of components.
 
 At the time of the latest benchmark, the example configuration produced nearly 700 components, and a run without a configuration produced nearly 7000 components.
 
+
+| Resource      | Example result | Cold start result |
+| ------------- | -------------- | ----------------- |
+| Time          | 10s            | 30s-60s           |
+| Memory        | 1GB            | 10GB              |
+| Components    | 700            | 7000              |
+| Dependencies  | 52 000         | 52 000            |
+
+
 ## Example `test.plan.json` configuration:
 
 ```
