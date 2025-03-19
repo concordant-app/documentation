@@ -12,8 +12,16 @@ We support various import statements, including require.
 
 ## Supported project configurations
 
-- [ ] TODO: List tsconfig.json fields that are used
-- [ ] TODO: Describe how package.json is used
+
+### `tsconfig.json`
+
+Used fields
+- `compilerOptions.paths` for resolving extracted module import paths
+- `extends` for merging `compilerOptions.paths` from multiple files
+
+
+### `package.json`
+- `dependencies` and `devDependencies` are read and used to filter 3rd party library dependencies out of the extracted imports, optimising the analysis
 
 ## Known problems ❌
 
