@@ -1,6 +1,6 @@
 # Sentry example
 
-<img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" valign="middle" width="20" height="20">[Sentry's codebase](https://github.com/getsentry/sentry)
+[Sentry's codebase](https://github.com/getsentry/sentry)<img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" valign="middle" width="20" height="20">
 
 ## Performance
 
