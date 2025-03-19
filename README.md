@@ -329,6 +329,22 @@ UI => API fetch calls
 
 Concordant's programming language support is at the core of the reliability of the testing plans. Each supported language has its own extraction rules for finding dependencies between files which emulate how the language itself resolves modules. 
 
+See the individual guides for specifics on what is and isn't supported currently.
+
+
+**Programming Languages**
+- [ ] [Typescript/JavaScript](languages/TypeScript-JavaScript.md) (*.ts, *.js)
+- [ ] Rust (in beta stage)
+
+**Frameworks**
+- [ ] [React](languages/TypeScript-JavaScript.md) (*.tsx, *.jsx) as Typescript/Javascript
+- [ ] [SolidJS](languages/TypeScript-JavaScript.md) (*.tsx, *.jsx) Typescript/Javascript
+- [ ] [VueJS](languages/TypeScript-JavaScript.md) (.vue) Typescript/Javascript
+
+**Project & Build Configurations**
+- [ ] [`tsconfig.json`](languages/TypeScript-JavaScript.md) for Typescript
+- [ ] [`package.json`](languages/TypeScript-JavaScript.md) Typescript/Javascript
+
 > Notes about quality assurance 🔬
 > 
 > The processing is a combination of text parsing, pattern matching and file lookup using known rules from how the programming language itself resolves modules. This part is built completely without
@@ -339,18 +355,6 @@ Concordant's programming language support is at the core of the reliability of t
 > path aliases that are taken into account when mapping the import code lines to dependencies. 
 
 
-
-**Programming Languages**
-- [ ] TODO: Typescript/JavaScript (*.ts, *.js)
-
-**Frameworks**
-- [ ] TODO: React (*.tsx, *.jsx) as Typescript/Javascript
-- [ ] TODO: SolidJS (*.tsx, *.jsx) Typescript/Javascript
-- [ ] TODO: VueJS (.vue) Typescript/Javascript
-
-**Project & Build Configurations**
-- [ ] TODO: `tsconfig.json` for Typescript
-- [ ] TODO: `package.json` Typescript/Javascript
 
 ---
 
