@@ -3,12 +3,32 @@
 We support various import statements, including require.
 
 ## Import statements
-- [ ] TODO: List known import statement styles
+Here's a non-exhaustive list of the variations we support.
 
-- Various "import from" statements
-- Various "import()" statements
-- Various "require()" statements
 
+```
+// Various "import from" statements
+
+import * from 'module';
+
+import { Something } from 'module';
+
+import { 
+Something,
+SomethingElse,
+AnotherThing
+} from 'module';
+
+import 'module';
+  
+// Various "import()" statements
+
+const SomeModule = import('module')
+
+// Various "require()" statements
+
+const point = require('module')
+```
 
 ## Supported project configurations
 
