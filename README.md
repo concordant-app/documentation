@@ -11,8 +11,9 @@ How to use and configure [Concordant.app](https://concordant.app) in your workfl
 2. Open your local repository in Concordant
 3. Make a code change
 4. Reload to get a testing plan
-5. Configure `test.plan.json` to suit your needs
-6. Fill blindspots with `dependencies.json`
+5. [Configure](#how-do-i-configure-concordant) `test.plan.json` to suit your needs
+6. Fill [blindspots](#additional-dependencies-blindspots) with `dependencies.json`
+7. Investigate our [case studies](./studies/Readme.md) to dive deeper into how Concordant can help you
 
 <br />
 
@@ -236,7 +237,7 @@ Features are defined as sets of glob matchers to filenames and paths from your r
 
 If you want to be sure, you can set your index page as an entrypoint. This way you always catch everything underneath. However, this doesn't work for architectures where the index isn't actually depending on the other pages. An example could be a system where the routes are generated from directory structures and the pages themselves link to these paths rather than to other UI components.
 
-It is possible to set a catch-all wildcard too. The more rules, and the more files they match, the more time it takes to analyse the codebase. Rules matching to several thousand components can be analysed in less than half a minute. See more about performance and deeper insights into how to configure in useful ways in our example case studies. (TODO 6)
+It is possible to set a catch-all wildcard too. The more rules, and the more files they match, the more time it takes to analyse the codebase. Rules matching to several thousand components can be analysed in less than half a minute. See more about performance and deeper insights into how to configure in useful ways in our example [case studies](./studies/Readme.md).
 
 
 **Examples**
@@ -288,7 +289,7 @@ Catching every JSX component
 **Note: The globs are treated as case-insensitive.**
 
 
-#### Additional Dependencies
+#### Additional Dependencies & Blindspots
 
 One of the main inspirations for creating Concordant was the mysterious nature of breaking some faraway features with a seemingly unintentional change. This is naturally solved by implementing a dependency analysis of the codebase. However, sometimes there is no dependency in the code. You can use `dependencies.json` in the root of your project to inject additional dependencies to the analysis. This is how we can overcome the missing dependencies between, for example, a JavaScript frontend and a Python backend.
 
@@ -320,7 +321,6 @@ UI => API fetch calls
 ]
 ```
 
-- TODO 6: Add a link to example case studies.
 
 ### Which technologies does Concordant support?
 
