@@ -28,13 +28,14 @@ Used fields
 1. ❌ Import statements that are using variables in the path of the module cannot be resolved as the code is never executed.
 
 ```
-let runtime_module_path = (process.env.NODE_ENV === 'development') ? "./mocks/" : "./api/external/"
-const module = import(`${runtime_module_path}/service-module`
+let runtime_module_path = (process.env.NODE_ENV === 'development') ? "./mocks/" : "./api/external/";
+const module = import(`${runtime_module_path}/service-module`);
 ```
 
-**Workaround: Use `dependencies.json` to mitigate critical blindspots.** 
+Workaround: Use `dependencies.json` to mitigate critical blindspots.
 
-2. Package.json import aliases are not supported
+2. ❌ Package.json import aliases are not supported. Workaround: Use `dependencies.json` to mitigate critical blindspots.
+3. ❌ `fetch()` and similar calls to APIs or URLs are not automatically mapped to modules. Workaround: Use `dependencies.json` to mitigate critical blindspots.
 
 ## Supported frameworks
 
