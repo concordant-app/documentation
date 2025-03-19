@@ -12,7 +12,7 @@ How to use and configure [Concordant.app](https://concordant.app) in your workfl
 3. Make a code change
 4. Reload to get a testing plan
 5. [Configure](#how-do-i-configure-concordant) `test.plan.json` to suit your needs
-6. Fill [blindspots](#additional-dependencies-blindspots) with `dependencies.json`
+6. Fill [blindspots](#additional-dependencies--blindspots) with `dependencies.json`
 7. Investigate our [case studies](./studies/Readme.md) to dive deeper into how Concordant can help you
 
 <br />
@@ -56,7 +56,7 @@ Concordant uses files to represent modules, modules are be mapped into features,
 ```
 import { Something } from './another-file'
 ```
-These dependencies are extracted from the code using [language specific import clauses](#which-technologies-does-concordant-support). More dependencies can also be added by hand. See more in the [Configuration guide.](#additional-dependencies-blindspots) 
+These dependencies are extracted from the code using [language specific import clauses](#which-technologies-does-concordant-support). More dependencies can also be added by hand. See more in the [Configuration guide.](#additional-dependencies--blindspots) 
 
 <img align="right" width="60%" height="60%" src="./change%20effects%20screenshot.png">
 
