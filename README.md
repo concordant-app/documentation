@@ -349,6 +349,19 @@ See the individual guides for specifics on what is and isn't supported currently
 **Operating systems**
 Concordant runs currently on MacOS only.
 
+**Version control systems**
+Concordant runs using a local git client, assumed to be available on the PATH.
+
+## Licensing
+
+Viewing `Test Rounds` requires a valid license. If your license is invalid, you will see the test round replaced with guidance to start a trial, purchase a license or add a license into the app. You can find these configurations also by clicking the Magic Wand logo in the header.
+
+### Trial license
+A trial license is per machine. It is for 1 month, after which you must enter a new valid license. 
+
+### Commercial licenses
+You can purchase a license through the app or by being in touch with your account manager.
+
 ---
 
 > Note: This documentation is provided with an open source license, whereas the app itself is closed source and commercial.
