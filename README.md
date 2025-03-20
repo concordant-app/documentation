@@ -139,10 +139,11 @@ The `Level` indicates how deep the listed component is in the dependency hierarc
 <br />
 Furthermore, with some technology stacks and naming conventions the cases are divided into `User flow` and `Technical details`. As an example, if the codebase contains JSX (*.jsx, *.tsx) files, these are assumed to be user facing components. The testing rounds focus first on the components a user can directly use. As sometimes even JSX files are actually very technical in nature, they may be categorised as utility or state modules, for example. In such situations the modules are automatically moved to the Technical Details grouping.
 
+<br />
 
 ### How do I configure Concordant?
 
-
+<br />
 
 Here's a configuration template using <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" valign="middle" width="20" height="20">[Sentry's codebase](https://github.com/getsentry/sentry) as an example.
 ```
@@ -188,10 +189,10 @@ Here's a configuration template using <img src="https://github.githubassets.com/
 
 ```
 
-#### Purpose
+#### `Purpose`
 Use the purpose configuration to set the intention of the project. This helps you align the configurations and testing actions. 
 
-#### Changes
+#### `Changes`
 Use Git's commit hashes, branch notation and shortcuts to define the start and end of diffing. If it works on with `git diff <old>..<new>`, it should work here. 
 
 **Examples**
@@ -224,7 +225,7 @@ Diff between branches
 
 Note: The diffing system uses your local git repository, meaning you may have to fetch it to get the most accurate diff to remote origins.
 
-#### Features
+#### `Features`
 
 
 Features are defined as sets of glob matchers to filenames and paths from your repository's root. The intention is to set define that are important with rules that make testing easier. Think in terms of what are the major view, pages or components of your application. These become your test suites, which in turn contain all the affected components automatically. Thus, you don't necessarily need to have rules for all features, as long as they are part of some bigger feature. 
