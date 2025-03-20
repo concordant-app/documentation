@@ -324,16 +324,16 @@ Concordant's programming language support is at the core of the reliability of t
 See the individual guides for specifics on what is and isn't supported currently.
 
 
-**Programming Languages**
+#### Programming Languages
 - [Typescript/JavaScript](languages/TypeScript-JavaScript.md) (*.ts, *.js)
 - Rust (in beta stage)
 
-**Frameworks**
+#### Frameworks
 - [React](languages/TypeScript-JavaScript.md) (*.tsx, *.jsx) as Typescript/Javascript
 - [SolidJS](languages/TypeScript-JavaScript.md) (*.tsx, *.jsx) Typescript/Javascript
 - [VueJS](languages/TypeScript-JavaScript.md) (.vue) Typescript/Javascript
 
-**Project & Build Configurations**
+#### Project & Build Configurations
 - [`tsconfig.json`](languages/TypeScript-JavaScript.md) for Typescript
 - [`package.json`](languages/TypeScript-JavaScript.md) Typescript/Javascript
 
@@ -346,10 +346,12 @@ See the individual guides for specifics on what is and isn't supported currently
 > Each language extractor may also take advantage of existing project configurations, such as `tsconfig.json` for TypeScript projects. In the case of TypeScript, the configuration file may provide import
 > path aliases that are taken into account when mapping the import code lines to dependencies. 
 
-**Operating systems**
+#### Operating systems
+
 Concordant runs currently on MacOS only.
 
-**Version control systems**
+#### Version control systems
+
 Concordant runs using a local git client, assumed to be available on the PATH.
 
 ## Licensing
