@@ -83,9 +83,11 @@ At the time of the latest benchmark, the example configuration produced nearly 7
 ## Feedback
 
 **Concordant v1.0.0**
+
 - Test Rounds using file names as the test case name become cumbersome with the `path/to/route/index.ts` architecture. => An option to switch between file path and file name would be helpful in separating multiple files with the same name at a glance
 - Concordant does not support Python yet, which means only the frontend can be analysed => Python support would be mighty helpful
 - Test Automation is not fully recognised by default => Improve configuration 
 
 **Sentry**
+
 No feedback yet.
