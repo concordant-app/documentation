@@ -1,3 +1,7 @@
+---
+description: A Test Study of Sentry with the help of Concordant. 21st March 2025
+---
+
 # Sentry example
 
 [Sentry's codebase](https://github.com/getsentry/sentry)<img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="" data-size="line">
