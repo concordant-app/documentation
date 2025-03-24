@@ -344,12 +344,9 @@ See the individual guides for specifics on what is and isn't supported currently
 >
 >
 >
-> The processing is a combination of text parsing, pattern matching and file lookup using known rules from how the programming language itself resolves modules. This part is built completely without\
-> fuzzy logic, such as machine learning models, in order to provide an exact and consistent extraction, always. The accuracy of this extraction is verified using 3rd party language specific implementations\
-> of the same process. In essence, this means using Abstract Syntax Tree capabilities of the languages themselves, either directly or through libraries. The intention is: If the code compiles correctly, Concordant resolves the modules correctly.
+> The processing is a combination of text parsing, pattern matching and file lookup using known rules from how the programming language itself resolves modules. This part is built completely without fuzzy logic, such as machine learning models, in order to provide an exact and consistent extraction, always. The accuracy of this extraction is verified using 3rd party language specific implementations of the same process. In essence, this means using Abstract Syntax Tree capabilities of the languages themselves, either directly or through libraries. The intention is: If the code compiles correctly, Concordant resolves the modules correctly.
 >
-> Each language extractor may also take advantage of existing project configurations, such as `tsconfig.json` for TypeScript projects. In the case of TypeScript, the configuration file may provide import\
-> path aliases that are taken into account when mapping the import code lines to dependencies.
+> Each language extractor may also take advantage of existing project configurations, such as `tsconfig.json` for TypeScript projects. In the case of TypeScript, the configuration file may provide import path aliases that are taken into account when mapping the import code lines to dependencies.
 
 #### Operating systems
 
