@@ -1,4 +1,4 @@
-# Documentation: Concordant.app
+# Concordant.app: Documentation
 
 The regression testing planner for developers.
 
@@ -142,9 +142,13 @@ Furthermore, with some technology stacks and naming conventions the cases are di
 \
 
 
-### How do I configure Concordant? 
+How do I configure Concordant?\
+
+
 
 Place a `test.plan.json` in your project's root.
+
+### Template
 
 ```json
 {
@@ -220,11 +224,11 @@ Here's a configuration example using <img src="https://github.githubassets.com/a
 
 
 
-#### `Purpose`
+### `Purpose`
 
 Use the purpose configuration to set the intention of the project. This helps you align the configurations and testing actions.
 
-#### `Changes`
+### `Changes`
 
 Use Git's commit hashes, branch notation and shortcuts to define the start and end of diffing. If it works on with `git diff <old>..<new>`, it should work here.
 
@@ -262,7 +266,7 @@ Diff between branches
 
 > Note: The diffing system uses your local git repository, meaning you may have to fetch it to get the most accurate diff to remote origins.
 
-#### `Features`
+### `Features`
 
 Features are defined as sets of glob matchers to filenames and paths from your repository's root. The intention is to set define that are important with rules that make testing easier. Think in terms of what are the major view, pages or components of your application. These become your test suites, which in turn contain all the affected components automatically. Thus, you don't necessarily need to have rules for all features, as long as they are part of some bigger feature.
 
@@ -322,7 +326,7 @@ Catching every JSX component
 
 > Note: The globs are treated as case-insensitive.
 
-#### `test_automation`
+### `test_automation`
 
 Configure test automation settings for processing.
 
@@ -340,7 +344,7 @@ Set glob matchers to mark test automation files.
 
 
 
-#### Additional Dependencies & Blindspots
+### Additional Dependencies & Blindspots
 
 One of the main inspirations for creating Concordant was the mysterious nature of breaking some faraway features with a seemingly unintentional change. This is naturally solved by implementing a dependency analysis of the codebase. However, sometimes there is no dependency in the code. You can use `dependencies.json` in the root of your project to inject additional dependencies to the analysis. This is how we can overcome the missing dependencies between, for example, a JavaScript frontend and a Python backend.
 

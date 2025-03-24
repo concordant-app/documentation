@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Documentation: Concordant.app](README.md)
+* [Concordant.app: Documentation](README.md)
 * [languages](languages/README.md)
   * [Typescript & JavaScript support](languages/TypeScript-JavaScript.md)
 * [Concordant.app case studies](studies/Readme.md)
