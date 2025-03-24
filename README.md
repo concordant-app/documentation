@@ -380,7 +380,7 @@ UI => API fetch calls
 
 
 
-### Which technologies does Concordant support?
+## Which technologies does Concordant support?
 
 Concordant's programming language support is at the core of the reliability of the testing plans. Each supported language has its own extraction rules for finding dependencies between files which emulate how the language itself resolves modules.
 
