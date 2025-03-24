@@ -55,6 +55,7 @@ _Concordant: To be in harmony within one's intentions and actions._
 3. [What is a Testing Plan?](./#what-is-a-testing-plan)
 4. [How do I configure Concordant?](./#how-do-i-configure-concordant)
 5. [Which technologies does Concordant support?](./#which-technologies-does-concordant-support)
+6. [Licensing](./#licensing)
 
 \
 
