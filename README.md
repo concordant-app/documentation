@@ -32,6 +32,17 @@ _Concordant: To be in harmony within one's intentions and actions._
 
 ![Screenshot of an example testing round from Concordant with testing details visible.](<testing round details screenshot.png>)
 
+### Features
+
+* Code changes mapped into a regression testing task list
+* Testing Rounds created based on features and components affected by changes
+* Features configured using file globs to match your naming conventions
+* Changes diffed between selected git commit hashes
+* Test Automation files cover testing tasks based on direct dependencies
+* `test.plan.json` configuration in your repository root
+
+
+
 ***
 
 \
@@ -57,7 +68,7 @@ There are two types of effects:
 * **Changed**: a file that has been changed is also an effect
 * **Affected**: a file that has a dependency to another file that has been affected or changed
 
-Concordant uses files to represent modules, modules are be mapped into features, and affected features become test cases within the test round. All the effects of the current diff are calculated using file-based module dependencies, such as:
+Concordant uses files to represent modules, modules are mapped into features, and affected features become test cases within the test round. All the effects of the current diff are calculated using file-based module dependencies, such as:
 
 ```
 import { Something } from './another-file'
