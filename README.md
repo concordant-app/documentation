@@ -164,17 +164,19 @@ Place a `test.plan.json` in your project's root.
       "old": "HEAD",
       "new": "HEAD@{upstream}"
     },
-
-    "test_automation": {
-      "matchers": ["**/*.test.{ts,tsx}"]
-    },
     "features": [
       {
         "alias": "App Homepage 📃",
         "matchers": ["**/index.tsx"]
       }
-    ]
-  }
+      ]
+    },
+    "excludes": [
+        "path/to/exclude",
+      ],
+    "test_automation": {
+      "matchers": ["**/*.test.{ts,tsx}"]
+    }
 }
 ```
 
@@ -344,6 +346,20 @@ Set glob matchers to mark test automation files.
 ```
 
 
+
+### `excludes`
+
+You can exclude paths from the processing by setting a list of excluded paths.
+
+**Examples**
+
+```
+"excludes": [
+    "some/path/to/exclude/
+],
+```
+
+> Note: The exclusion paths are not globs.
 
 ### Additional Dependencies & Blindspots
 
