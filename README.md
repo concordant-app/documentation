@@ -144,14 +144,14 @@ Furthermore, with some technology stacks and naming conventions the cases are di
 
 ### How do I configure Concordant? 
 
-Here's a configuration template using <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="" data-size="line">[Sentry's codebase](https://github.com/getsentry/sentry) as an example.
+Place a `test.plan.json` in your project's root.
 
-```
+```json
 {
-  "name": "Sentry Fair Source codebase",
+  "name": "Project Name, Visible in the app",
   "purpose": {
-    "primary": "Code breaks, fix it faster",
-    "secondary": "with application monitoring"
+    "primary": "Project's purpose here",
+    "secondary": "with an additional row"
 
   },
   "config": {
@@ -159,13 +159,43 @@ Here's a configuration template using <img src="https://github.githubassets.com/
       "old": "HEAD",
       "new": "HEAD@{upstream}"
     },
-    "features": [
 
+    "test_automation": {
+      "matchers": ["**/*.test.{ts,tsx}"]
+    },
+    "features": [
+      {
+        "alias": "App Homepage 📃",
+        "matchers": ["**/index.tsx"]
+      }
+    ]
+  }
+}
+```
+
+More details of these configurations below.
+
+Here's a configuration example using <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="" data-size="line">[Sentry's codebase](https://github.com/getsentry/sentry) as a reference.
+
+```json
+{
+  "name": "Sentry Fair Source codebase",
+  "purpose": {
+    "primary": "Code breaks, fix it faster",
+    "secondary": "with application monitoring"
+  },
+  "config": {
+    "changes": {
+      "old": "HEAD",
+      "new": "HEAD@{upstream}"
+    },
+    
+    "features": [
       {
         "alias": "App Homepage 👋 ",
         "matchers": ["static/app/views/app/index.tsx"]
       },
-
+​
       {
         "alias": "Performance 🚀 ",
         "matchers": ["static/app/views/performance/**/*.tsx"]
@@ -186,8 +216,9 @@ Here's a configuration template using <img src="https://github.githubassets.com/
     ]
   }
 }
-
 ```
+
+
 
 #### `Purpose`
 
@@ -290,6 +321,24 @@ Catching every JSX component
 ```
 
 > Note: The globs are treated as case-insensitive.
+
+#### `test_automation`
+
+Configure test automation settings for processing.
+
+**Examples**
+
+Set glob matchers to mark test automation files.
+
+```
+
+"test_automation": {
+    "matchers": ["**/*.spec.{ts,tsx}"]
+},
+
+```
+
+
 
 #### Additional Dependencies & Blindspots
 
