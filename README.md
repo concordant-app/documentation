@@ -403,17 +403,7 @@ Concordant runs currently on MacOS only. [Packages](https://web.crabnebula.cloud
 
 Concordant runs using a local git client, assumed to be available on the PATH.
 
-## Licensing
 
-Viewing `Testing Rounds` requires a valid license. If your license is invalid, you will see the test round replaced with guidance to start a trial, purchase a license or add a license into the app. You can find these configurations also by clicking the Magic Wand<img src=".gitbook/assets/Screenshot 2025-03-21 at 11.57.11.png" alt="" data-size="line"> logo in the header.
-
-### Trial license
-
-A trial license is per machine. It is for 1 month, after which you must enter a new valid license through the Magic Wand <img src=".gitbook/assets/Screenshot 2025-03-21 at 11.57.11.png" alt="" data-size="line"> menu.
-
-### Commercial licenses
-
-You can purchase a license through the app or by being in touch with your account manager or customer service.
 
 ***
 
