@@ -4,7 +4,6 @@ The regression testing planner for developers.
 
 Currently not available for public downloads.
 
-\
 
 
 How to use and configure Concordant.app in your workflows.
@@ -19,20 +18,17 @@ How to use and configure Concordant.app in your workflows.
 6. Fill [blindspots](./#additional-dependencies--blindspots) with `dependencies.json`
 7. Investigate our [case studies](studies/) to dive deeper into how Concordant can help you
 
-\
 
 
 _Concordant: To be in harmony within one's intentions and actions._
 
-\
 
 
 ## The `Effects` of Your `Code Changes` as a `Testing Plan`
 
-\
 
 
-![Screenshot of an example testing round from Concordant with testing details visible.](<testing round details screenshot.png>)
+![Screenshot of an example testing round from Concordant with testing details visible.](<.gitbook/assets/testing round details screenshot.png>)
 
 ### Features
 
@@ -43,11 +39,8 @@ _Concordant: To be in harmony within one's intentions and actions._
 * Test Automation files cover testing tasks based on direct dependencies
 * `test.plan.json` configuration in your repository root
 
-
-
 ***
 
-\
 
 
 **Table of Contents**
@@ -59,7 +52,6 @@ _Concordant: To be in harmony within one's intentions and actions._
 5. [Which technologies does Concordant support?](./#which-technologies-does-concordant-support)
 6. [Licensing](./#licensing)
 
-\
 
 
 ### What are `Effects`?
@@ -79,19 +71,15 @@ import { Something } from './another-file'
 
 These dependencies are extracted from the code using [language specific import clauses](./#which-technologies-does-concordant-support). More dependencies can also be added by hand. See more in the [configuration guide.](./#additional-dependencies--blindspots)
 
-\
-\
+<br>
 
-
-<figure><img src="change effects screenshot.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/change effects screenshot.png" alt=""><figcaption></figcaption></figure>
 
 > See how some **changes** become multiplied as **effects**. This is why Concordant was created.
 >
 > Note: Using files as the module representation is an optimisation on multiple levels. More on this topic in the [Testing Plan guide](./#what-is-a-testing-plan).
 
-\
-\
-
+<br>
 
 ### What is a `Code Change`?
 
@@ -104,37 +92,27 @@ There are two types of changes:
 
 Concordant considers changes always on a file level, just as effects. The list of changes is always created as a combination of the local uncommitted changes and the committed changes based on the change configuration. If no change configuration is provided, the default is the current branch vs the latest upstream state of the branch. Read more in the [configuration guide](./#changes).
 
-\
 
 
 ### What is a `Testing Plan`?
 
-\
 
 
 A testing plan is a fusion of features, effects, configuration and tasks. Based on configured feature rules, effects activate features into test cases on the next test round. The test round represents a partial test plan, focused and filtered down to only show the test cases that have been activated by effects. The Test Round itself is a list of tasks where you can drill down to get more details on which parts of a feature have been affected and why.
 
-\
 
 
-<figure><img src="testing round screenshot.png" alt=""><figcaption><p>Overview of a Testing Round</p></figcaption></figure>
+<figure><img src=".gitbook/assets/testing round screenshot.png" alt=""><figcaption><p>Overview of a Testing Round</p></figcaption></figure>
 
-Effects activate parts of the testing plan and produce a test round.\
+Effects activate parts of the testing plan and produce a test round.\\
 
+<figure><img src=".gitbook/assets/feature rules screenshot.png" alt=""><figcaption><p>Overview of Feature Configurations</p></figcaption></figure>
 
+The test plan, and therefore the test round, is created with feature configurations. The feature configurations are glob matchers to files, which means your naming conventions and project structures are meaningful.<br>
 
+<figure><img src=".gitbook/assets/testing round details screenshot.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="feature rules screenshot.png" alt=""><figcaption><p>Overview of Feature Configurations</p></figcaption></figure>
-
-The test plan, and therefore the test round, is created with feature configurations. The feature configurations are glob matchers to files, which means your naming conventions and project structures are meaningful.\
-\
-
-
-<figure><img src="testing round details screenshot.png" alt=""><figcaption></figcaption></figure>
-
-Affected files become test cases inside test suites. They may be further categorised based on configurations and technology assumptions.\
-\
-
+Affected files become test cases inside test suites. They may be further categorised based on configurations and technology assumptions.<br>
 
 **About the design**
 
@@ -142,12 +120,9 @@ Affected files become test cases inside test suites. They may be further categor
 The `Level` indicates how deep the listed component is in the dependency hierarchy from the feature. For example, `level: 1` means the component is a direct descendant. `Level: 3` means the component is a grand-grand-child of the feature. This is intended to help you in determining what to focus on. The design assumes the deeper the component goes, the more it becomes an implementation detail. However, sometimes the implementation details are the most important. This is why all affected components are visible.\
 Furthermore, with some technology stacks and naming conventions the cases are divided into `User flow` and `Technical details`. As an example, if the codebase contains JSX (\*.jsx, \*.tsx) files, these are assumed to be user facing components. The testing rounds focus first on the components a user can directly use. As sometimes even JSX files are actually very technical in nature, they may be categorised as utility or state modules, for example. In such situations the modules are automatically moved to the Technical Details grouping.
 
-\
 
 
-How do I configure Concordant?\
-
-
+How do I configure Concordant?\\
 
 Place a `test.plan.json` in your project's root.
 
@@ -227,8 +202,6 @@ Here's a configuration example using <img src="https://github.githubassets.com/a
 }
 ```
 
-
-
 ### `Purpose`
 
 Use the purpose configuration to set the intention of the project. This helps you align the configurations and testing actions.
@@ -266,8 +239,7 @@ Diff between branches
     }
 ```
 
-\
-
+\\
 
 > Note: The diffing system uses your local git repository, meaning you may have to fetch it to get the most accurate diff to remote origins.
 
@@ -347,8 +319,6 @@ Set glob matchers to mark test automation files.
 
 ```
 
-
-
 ### `excludes`
 
 You can exclude paths from the processing by setting a list of excluded paths.
@@ -397,8 +367,6 @@ UI => API fetch calls
 ]
 ```
 
-
-
 ## Which technologies does Concordant support?
 
 Concordant's programming language support is at the core of the reliability of the testing plans. Each supported language has its own extraction rules for finding dependencies between files which emulate how the language itself resolves modules.
@@ -421,11 +389,7 @@ See the individual guides for specifics on what is and isn't supported currently
 * [`tsconfig.json`](languages/TypeScript-JavaScript.md) for Typescript
 * [`package.json`](languages/TypeScript-JavaScript.md) Typescript/Javascript
 
-
-
 > **Notes about quality assurance 🔬**
->
->
 >
 > The processing is a combination of text parsing, pattern matching and file lookup using known rules from how the programming language itself resolves modules. This part is built completely without fuzzy logic, such as machine learning models, in order to provide an exact and consistent extraction, always. The accuracy of this extraction is verified using 3rd party language specific implementations of the same process. In essence, this means using Abstract Syntax Tree capabilities of the languages themselves, either directly or through libraries. The intention is: If the code compiles correctly, Concordant resolves the modules correctly.
 >
@@ -445,7 +409,7 @@ Viewing `Testing Rounds` requires a valid license. If your license is invalid, y
 
 ### Trial license
 
-A trial license is per machine. It is for 1 month, after which you must enter a new valid license through the Magic Wand  <img src=".gitbook/assets/Screenshot 2025-03-21 at 11.57.11.png" alt="" data-size="line"> menu.
+A trial license is per machine. It is for 1 month, after which you must enter a new valid license through the Magic Wand <img src=".gitbook/assets/Screenshot 2025-03-21 at 11.57.11.png" alt="" data-size="line"> menu.
 
 ### Commercial licenses
 
