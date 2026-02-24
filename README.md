@@ -2,14 +2,16 @@
 
 The regression testing planner for developers.
 
+Currently not available for public downloads.
+
 \
 
 
-How to use and configure [Concordant.app](https://concordant.app) in your workflows.
+How to use and configure Concordant.app in your workflows.
 
 **Quick start**
 
-1. [**Download Concordant.app**](https://web.crabnebula.cloud/concordant/concordant/releases)
+1. Download Concordant.app
 2. Open your local repository in Concordant
 3. Make a code change
 4. Reload to get a testing plan
